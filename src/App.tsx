@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-import Profile from "./pages/Profile";
 import { SetAllAccessTokens, StoreContext } from "./mobx stores/RootStore";
 import {
   auth,
@@ -79,7 +78,7 @@ function App() {
           <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
           <Route element={<PrivateRoute activeUser={auth.currentUser} />}>
-            <Route path="/profile" element={<Profile />} />
+
           </Route>
         </Routes>
       </Router>
