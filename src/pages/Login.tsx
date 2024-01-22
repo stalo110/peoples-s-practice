@@ -11,7 +11,6 @@ import { StoreContext } from "../mobx stores/RootStore";
 
 const Login = () => {
 
-  const { authStore } = useContext(StoreContext);
   const [loading, setLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const [userDetails, setUserDetails] = useState({

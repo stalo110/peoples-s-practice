@@ -1,9 +1,8 @@
 import axios from "axios";
 import { configure, makeAutoObservable, runInAction } from "mobx";
 import BaseDirectories from "../base directories/BaseDirectories";
-import { toast } from "react-toastify";
 configure({ enforceActions: "always" });
-// eslint-disable-next-line @typescript-eslint/no-var-requires
+
 
 type Profile = {
   [key: string]: any;

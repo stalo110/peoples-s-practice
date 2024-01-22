@@ -163,7 +163,7 @@ const Hero = () => {
                         countries.find((country) => country.code === "USD")
                           ?.flag
                       }
-                      // alt={`${toCountry} flag`}
+                      alt={`flag`}
                     />
                   </div>
                   <div>

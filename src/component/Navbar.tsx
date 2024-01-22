@@ -23,16 +23,16 @@ const Navbar = () => {
       {/* Desktop Navigation */}
       <div className="sm:block">
       <div className="hidden desktop:flex items-center justify-between gap-[40px] w-[40%]">
-          <a className="text-[#054B98] font-mont text-base font-semibold normal-case">
+          <a href="/home" className="text-[#054B98] font-mont text-base font-semibold normal-case">
             Home
           </a>
-          <a className="text-[#054B98] font-mont text-base font-semibold normal-case">
+          <a href="/about" className="text-[#054B98] font-mont text-base font-semibold normal-case">
             About
           </a>
-          <a className="text-[#054B98] font-mont text-base font-semibold normal-case">
+          <a href="/services" className="text-[#054B98] font-mont text-base font-semibold normal-case">
             Service
           </a>
-          <a className="text-[#054B98] font-mont text-base font-semibold normal-case">
+          <a href="/contact" className="text-[#054B98] font-mont text-base font-semibold normal-case">
             Contact
           </a>
           </div>
