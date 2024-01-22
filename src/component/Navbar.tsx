@@ -3,6 +3,7 @@ import logo from "../asset/areocovert-logo.svg";
 import { observer } from "mobx-react-lite";
 import { FaBars } from "react-icons/fa";
 import { AiOutlineClose } from "react-icons/ai";
+import { Link } from "react-router-dom";
  
 const Navbar = () => {
   const [isNavVisible, setIsNavVisible] = useState(false);
@@ -42,22 +43,22 @@ const Navbar = () => {
       {/* Mobile Navigation */}
       <div className="sm:block">
       <div className="hidden desktop:flex items-center justify-between gap-[20px] w-[100%] gap-7">
-        <button
-          className="text-[#054B98] font-mont text-base font-semibold normal-case"
-          onClick={() => {
-            window.location.href = "/login";
-          }}
+        <Link  
+        to="/login"
+        className="bg-[#FFB01D] font-mont text-[#000] px-4 py-2 rounded-full text-lg font-bold leading-normal capitalize w-[100%] h-[50px]"
         >
           Login
-        </button>
-        <button
+        </Link>
+        
+        {/* <button
+          href="/register"
           className="bg-[#FFB01D] font-mont text-[#000] px-4 py-2 rounded-full text-lg font-bold leading-normal capitalize w-[100%] h-[50px]"
           onClick={() => {
             window.location.href = "/register";
           }}
         >
           Sign Up
-        </button>
+        </button> */}
       </div>
       </div>
  
