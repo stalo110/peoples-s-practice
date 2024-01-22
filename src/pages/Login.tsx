@@ -203,14 +203,14 @@ const Login = () => {
           <p className="text-[#000] text-lg font-mont font-normal">
             Need an account?
           </p>
-          <button
-            onClick={() => {
-              window.location.href = "/register";
-            }}
-            className="text-[#054B98] text-lg font-mont font-normal"
-          >
-            Sign up
-          </button>
+          
+          <Link 
+           to="/register"
+           className="text-[#054B98] text-lg font-mont font-normal"
+           >
+          Sign Up
+       </Link>
+        
         </div>
         <p className="font-mont text-[#000] font-normal text-sm sm:text-base p-1 sm:p-2">
         This site is protected by reCAPTCHA and the Google

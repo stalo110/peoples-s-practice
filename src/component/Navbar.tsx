@@ -51,8 +51,8 @@ const Navbar = () => {
         </Link>
         
         <Link 
-           to="/login"
-           className="bg-[#FFB01D] font-mont text-[#000] px-4 py-2 rounded-full text-lg font-bold leading-normal capitalize w-[100%] h-[50px]"
+           to="/register"
+           className="bg-[#FFB01D] font-mont text-[#000] text-center px-4 py-2 rounded-full text-lg font-bold leading-normal capitalize w-[100%] h-[50px] pt-[12px]"
            >
           Sign Up
        </Link>
@@ -84,22 +84,19 @@ const Navbar = () => {
           <li className="text-[#054B98] font-mont text-base font-semibold normal-case">
             Contact
           </li>
-          <li
-            className="text-[#054B98] font-mont text-base font-semibold normal-case"
-            onClick={() => {
-              window.location.href = "/login";
-            }}
-          >
-            Login
-          </li>
-          <button
-        className="bg-[#FFB01D] font-mont text-[#000] px-4 py-2 rounded-full text-lg font-bold leading-normal capitalize w-[50%] h-[50px]"
-          onClick={() => {
-            window.location.href = "/register";
-          }}
+          <Link  
+        to="/login"
+        className="text-[#054B98] font-mont text-base font-semibold normal-case"
         >
+          Login
+        </Link>
+        <Link 
+           to="/register"
+           className="bg-[#FFB01D] font-mont text-[#000] text-center px-4 py-2 rounded-full text-lg font-bold leading-normal capitalize w-[50%] h-[50px] pt-[12px]"
+           >
           Sign Up
-        </button>
+       </Link>
+          
         </ul>
       </div>
     </div>

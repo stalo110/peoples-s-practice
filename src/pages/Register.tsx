@@ -57,14 +57,12 @@ const Register: FC = observer(() => {
           <p className="font-mont font-normal text-lg text-[#000]">
             Already have an account?
           </p>
-          <button
-            className="font-mont font-normal text-lg text-[#054B98]"
-            onClick={() => {
-              window.location.href = "/login";
-            }}
-          >
-            Login
-          </button>
+          <Link  
+        to="/login"
+        className="font-mont font-normal text-lg text-[#054B98]"
+        >
+          Login
+        </Link>
         </div>
       </div>
     </div>
