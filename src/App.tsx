@@ -16,11 +16,11 @@ import PrivateRoute from "./component/PrivateRoute";
 import { observer } from "mobx-react-lite";
 
 function App() {
-  const { profileStore, authStore, walletStore } = useContext(StoreContext);
-  const [user, setUser] = useState<null | any>(null);
-  const [activeUser, setActiveUser] = React.useState(
-    false || window.sessionStorage.getItem("userStatus") === "true"
-  );
+  const { profileStore, authStore } = useContext(StoreContext);
+  // const [user, setUser] = useState<null | any>(null);
+  // const [activeUser, setActiveUser] = React.useState(
+  //   false || window.sessionStorage.getItem("userStatus") === "true"
+  // );
 
   useEffect(() => {
     const unsubscribe = onAuthStateChangedListener(async (res: any) => {
@@ -39,17 +39,17 @@ function App() {
         if (res) {
           if (res.emailVerified) {
             window.sessionStorage.setItem("userStatus", "true");
-            setActiveUser(true);
+            // setActiveUser(true);
           }
         } else {
           window.sessionStorage.setItem("userStatus", "false");
-          setActiveUser(false);
+          // setActiveUser(false);
         }
-        return res ? setUser(res) : setUser(null);
+        // return res ? setUser(res) : setUser(null);
       }
     });
     return unsubscribe;
-  }, []);
+  }, [authStore, profileStore]);
 
   useEffect(() => {
     const checkAndRenewToken = async () => {

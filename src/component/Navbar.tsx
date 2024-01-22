@@ -1,43 +1,20 @@
-import React, { useEffect, useState } from "react";
+import { useState } from "react";
 import logo from "../asset/areocovert-logo.svg";
-import { Link } from "react-router-dom";
-import { toast } from "react-toastify";
-import Spinner from "../component/Spinner";
-import { LogOut } from "../utils/firebase/AuthFirestore";
 import { observer } from "mobx-react-lite";
-import { auth } from "../firebase/firebase";
 import { FaBars } from "react-icons/fa";
 import { AiOutlineClose } from "react-icons/ai";
  
 const Navbar = () => {
   const [isNavVisible, setIsNavVisible] = useState(false);
-  const [currentUser, setCurrentUser] = useState<string | null>(null);
-  const [loading, setLoading] = useState(false);
- 
-  useEffect(() => {
-    setCurrentUser(window.sessionStorage.getItem("user") as string);
-  }, [auth.currentUser]);
- 
-  const handleSignOut = async (e: any) => {
-    e.preventDefault();
-    setLoading(true);
-    const res = await LogOut();
-    if (res.error === false) {
-      setTimeout(() => setLoading(false), 1000);
-      toast.success("Logout Successful!");
-    } else {
-      setLoading(false);
-      toast.error("Logout Failed!");
-    }
-  };
+
  
   const toggleNavVisibility = () => {
     setIsNavVisible(!isNavVisible);
   };
- 
+
   return (
     <div className="bg-[#fff] flex justify-between items-center fixed top-0 left-0 w-full z-10 px-6 md:px-10 lg:px-16 xl:px-24 h-[104px]">
-      {loading && <Spinner />}
+     
  
       <div className="">
         <img src={logo} alt="logo" />
@@ -87,8 +64,7 @@ const Navbar = () => {
       {/* Mobile Menu Toggle */}
       <div className="cursor-pointer md:hidden" onClick={toggleNavVisibility}>
         {isNavVisible ? (
-          // import { FaBars } from "react-icons/fa";
-          // import { AiOutlineClose } from "react-icons/ai";
+
           <span>< AiOutlineClose/></span> // X icon
         ) : (
           <span>< FaBars/></span> // Bar icon

@@ -24,9 +24,9 @@ const countries = [
 ];
 
 const Hero = () => {
-  const [amount, setAmount] = useState("");
-  const [fromCountry, setFromCountry] = useState(countries[0].code);
-  const [toCountry, setToCountry] = useState(countries[1].code);
+  // const [amount, setAmount] = useState("");
+  // const [fromCountry, setFromCountry] = useState(countries[0].code);
+  // const [toCountry, setToCountry] = useState(countries[1].code);
   const [showToDropdown, setShowToDropdown] = useState(false);
 
   // const handleAmountChange = (e:any) => {
@@ -91,17 +91,17 @@ const Hero = () => {
               >
                 <div className="flex  items-center w-full justify-between">
                   <div className="flex font-mont ">
-                    {countries.find((country) => country.code === toCountry)
+                    {countries.find((country) => country.code === "USD")
                       ?.code || ""}
-                    {countries.find((country) => country.code === toCountry)
+                    {countries.find((country) => country.name === " - US Dollar")
                       ?.name || ""}
                     <img
                       className="ml-2 w-[36px] h-[24px]"
                       src={
-                        countries.find((country) => country.code === toCountry)
+                        countries.find((country) => country.code === "USD")
                           ?.flag || ""
                       }
-                      alt={`${toCountry} flag`}
+                      alt={`flag`}
                     />
                   </div>
                   <div>
@@ -163,7 +163,7 @@ const Hero = () => {
                         countries.find((country) => country.code === "USD")
                           ?.flag
                       }
-                      alt={`${toCountry} flag`}
+                      // alt={`${toCountry} flag`}
                     />
                   </div>
                   <div>
