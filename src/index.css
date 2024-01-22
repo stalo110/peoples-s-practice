@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+
+@layer components {
+  .btn-primary {
+    flex: 1;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: #054b98;
+    width: 472px;
+    height: 40px;
+    border-radius: 12px;
+    color: #fff;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: capitalize;
+  }
+
+  @layer components {
+    .input-control {
+      @apply w-[461px] h-[40px] px-3 py-2 border-[#AFB6E5] border-2 rounded;
+    }
+
+    .input-phone {
+        @apply py-[1px] px-[4px] w-[98%] border-[#AFB6E5] border-2 rounded;
+    }
+  }
+}
