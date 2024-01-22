@@ -45,20 +45,17 @@ const Navbar = () => {
       <div className="hidden desktop:flex items-center justify-between gap-[20px] w-[100%] gap-7">
         <Link  
         to="/login"
-        className="bg-[#FFB01D] font-mont text-[#000] px-4 py-2 rounded-full text-lg font-bold leading-normal capitalize w-[100%] h-[50px]"
+        className="text-[#054B98] font-mont text-base font-semibold normal-case"
         >
           Login
         </Link>
         
-        {/* <button
-          href="/register"
-          className="bg-[#FFB01D] font-mont text-[#000] px-4 py-2 rounded-full text-lg font-bold leading-normal capitalize w-[100%] h-[50px]"
-          onClick={() => {
-            window.location.href = "/register";
-          }}
-        >
+        <Link 
+           to="/login"
+           className="bg-[#FFB01D] font-mont text-[#000] px-4 py-2 rounded-full text-lg font-bold leading-normal capitalize w-[100%] h-[50px]"
+           >
           Sign Up
-        </button> */}
+       </Link>
       </div>
       </div>
  
@@ -96,7 +93,7 @@ const Navbar = () => {
             Login
           </li>
           <button
-          className="bg-[#FFB01D] font-mont text-[#000] px-4 py-2 rounded-full text-lg font-bold leading-normal capitalize w-[50%] h-[50px]"
+        className="bg-[#FFB01D] font-mont text-[#000] px-4 py-2 rounded-full text-lg font-bold leading-normal capitalize w-[50%] h-[50px]"
           onClick={() => {
             window.location.href = "/register";
           }}

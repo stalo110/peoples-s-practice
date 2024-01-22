@@ -7,18 +7,14 @@ import { SetAllAccessTokens, StoreContext } from "./mobx stores/RootStore";
 import {
   auth,
   onAuthStateChangedListener,
-  // requestPermission,
 } from "./firebase/firebase";
 import PrivateRoute from "./component/PrivateRoute";
-// import ProtectedRoute from "./component/ProtectedRoute";
+
 import { observer } from "mobx-react-lite";
 
 function App() {
   const { profileStore, authStore } = useContext(StoreContext);
-  // const [user, setUser] = useState<null | any>(null);
-  // const [activeUser, setActiveUser] = React.useState(
-  //   false || window.sessionStorage.getItem("userStatus") === "true"
-  // );
+
 
   useEffect(() => {
     const unsubscribe = onAuthStateChangedListener(async (res: any) => {
@@ -73,10 +69,9 @@ function App() {
     <div className="">
       <Router>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/*" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Register />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
           <Route element={<PrivateRoute activeUser={auth.currentUser} />}>
 
           </Route>
