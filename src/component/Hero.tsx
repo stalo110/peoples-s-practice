@@ -198,7 +198,7 @@ const Hero = () => {
         </div>
         <div className="w-[90%] flex justify-end">
 
-        <button className="rounded-3xl bg-[#054B98] p-[40px] py-[14px] text-[#FFF] font-mont">
+        <button className="flex justify center align center mr-[20%] desktop: rounded-3xl bg-[#054B98] p-[40px] py-[14px] text-[#FFF] font-mont">
           Convert
         </button>
         </div>

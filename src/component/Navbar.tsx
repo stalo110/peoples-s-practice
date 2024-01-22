@@ -6,6 +6,8 @@ import Spinner from "../component/Spinner";
 import { LogOut } from "../utils/firebase/AuthFirestore";
 import { observer } from "mobx-react-lite";
 import { auth } from "../firebase/firebase";
+import { FaBars } from "react-icons/fa";
+import { AiOutlineClose } from "react-icons/ai";
  
 const Navbar = () => {
   const [isNavVisible, setIsNavVisible] = useState(false);
@@ -85,9 +87,11 @@ const Navbar = () => {
       {/* Mobile Menu Toggle */}
       <div className="cursor-pointer md:hidden" onClick={toggleNavVisibility}>
         {isNavVisible ? (
-          <span>&#10005;</span> // X icon
+          // import { FaBars } from "react-icons/fa";
+          // import { AiOutlineClose } from "react-icons/ai";
+          <span>< AiOutlineClose/></span> // X icon
         ) : (
-          <span>&#9776;</span> // Bar icon
+          <span>< FaBars/></span> // Bar icon
         )}
       </div>
  
